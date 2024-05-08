@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function CounterPage() {
   return (
     <>
-      <div className="grid grid-cols-2 gap-2 place-content-center justify-items-center w-full h-screen bg-cyan-700">
+      <div className="grid h-screen w-full grid-cols-2 place-content-center justify-items-center gap-2 bg-cyan-700">
         <CarCounter />
       </div>
     </>
