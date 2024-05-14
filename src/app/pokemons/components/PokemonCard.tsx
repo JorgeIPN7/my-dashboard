@@ -21,7 +21,9 @@ export const PokemonCard = ({ pokemon }: Props) => {
             width={32}
             height={32}
           />
-          <p className="pt-2 text-lg font-semibold text-gray-50">{name}</p>
+          <p className="pt-2 text-lg font-semibold capitalize text-gray-50">
+            {name}
+          </p>
           <p className="text-sm text-gray-100"></p>
           <div className="mt-5">
             <a className="rounded-full border px-4 py-2 text-xs font-semibold text-gray-100">

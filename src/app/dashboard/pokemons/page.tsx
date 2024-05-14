@@ -1,20 +1,23 @@
-import { PokemonGridCards } from "@/app/pokemons/components/PokemonGridCards";
-import { PokemonSimpleResult } from "@/app/pokemons/interfaces/pokemon-simple-result";
-import { PokemonsResponse } from "@/app/pokemons/interfaces/pokemons-response";
+import { PokemonGridCards } from '@/app/pokemons/components/PokemonGridCards';
+import { PokemonSimpleResult } from '@/app/pokemons/interfaces/pokemon-simple-result';
+import { PokemonsResponse } from '@/app/pokemons/interfaces/pokemons-response';
 
 const fetchPokemons = async (
   limit: number = 10,
-  offset: number = 0,
+  offset: number = 0
 ): Promise<PokemonSimpleResult[]> => {
   const response = await fetch(
-    `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`,
+    `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`
   );
   const data: PokemonsResponse = await response.json();
 
-  const result: PokemonSimpleResult[] = data.results.map((pokemon) => ({
-    id: pokemon.url.split("/").at(-2)!,
-    name: pokemon.name,
+  const result: PokemonSimpleResult[] = data.results.map(pokemon => ({
+    id: pokemon.url.split('/').at(-2)!,
+    name: pokemon.name
   }));
+
+  throw new Error('Error de prueba');
+
   return result;
 };
 
