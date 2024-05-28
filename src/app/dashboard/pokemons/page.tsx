@@ -1,6 +1,6 @@
-import { PokemonGridCards } from '@/app/pokemons/components/PokemonGridCards';
-import { PokemonSimpleResult } from '@/app/pokemons/interfaces/pokemon-simple-result';
-import { PokemonsResponse } from '@/app/pokemons/interfaces/pokemons-response';
+import { PokemonGridCards } from '@/pokemons/components/PokemonGridCards';
+import { PokemonSimpleResult } from '@/pokemons/interfaces/pokemon-simple-result';
+import { PokemonsResponse } from '@/pokemons/interfaces/pokemons-response';
 
 const fetchPokemons = async (
   limit: number = 10,
@@ -15,8 +15,6 @@ const fetchPokemons = async (
     id: pokemon.url.split('/').at(-2)!,
     name: pokemon.name
   }));
-
-  throw new Error('Error de prueba');
 
   return result;
 };
