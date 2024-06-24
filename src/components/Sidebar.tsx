@@ -1,32 +1,32 @@
-import Image from "next/image";
-import { MdDashboard } from "react-icons/md";
-import { BiAbacus } from "react-icons/bi";
-import { FaSpaghettiMonsterFlying } from "react-icons/fa6";
-import { SidebarMenuItem } from "./SidebarMenuItem";
+import Image from 'next/image';
+import { MdDashboard } from 'react-icons/md';
+import { BiAbacus } from 'react-icons/bi';
+import { FaSpaghettiMonsterFlying } from 'react-icons/fa6';
+import { SidebarMenuItem } from './SidebarMenuItem';
 
 const getDay = () => {
   const days = [
-    "Domingo",
-    "Lunes",
-    "Martes",
-    "Miércoles",
-    "Jueves",
-    "Viernes",
-    "Sábado",
+    'Domingo',
+    'Lunes',
+    'Martes',
+    'Miércoles',
+    'Jueves',
+    'Viernes',
+    'Sábado'
   ];
   const months = [
-    "Enero",
-    "Febrero",
-    "Marzo",
-    "Abril",
-    "Mayo",
-    "Junio",
-    "Julio",
-    "Agosto",
-    "Septiembre",
-    "Octubre",
-    "Noviembre",
-    "Diciembre",
+    'Enero',
+    'Febrero',
+    'Marzo',
+    'Abril',
+    'Mayo',
+    'Junio',
+    'Julio',
+    'Agosto',
+    'Septiembre',
+    'Octubre',
+    'Noviembre',
+    'Diciembre'
   ];
   const date = new Date();
   return `${days[date.getDay()]} ${date.getDate()} de ${
@@ -36,23 +36,23 @@ const getDay = () => {
 
 const menuItems = [
   {
-    title: "Dashboard",
-    description: "Inicio",
+    title: 'Dashboard',
+    description: 'Inicio',
     menuIcon: <MdDashboard size={30} />,
-    path: "/dashboard/inicio",
+    path: '/dashboard/inicio'
   },
   {
-    title: "Contador",
-    description: "Ejercicio básico",
+    title: 'Contador',
+    description: 'Ejercicio básico',
     menuIcon: <BiAbacus size={30} />,
-    path: "/dashboard/counter",
+    path: '/dashboard/counter'
   },
   {
-    title: "Pokemon",
-    description: "Lista de pokemons",
+    title: 'Pokémons',
+    description: 'Lista de pokémons',
     menuIcon: <FaSpaghettiMonsterFlying size={30} />,
-    path: "/dashboard/pokemons",
-  },
+    path: '/dashboard/pokemons'
+  }
 ];
 
 export const Sidebar = () => {

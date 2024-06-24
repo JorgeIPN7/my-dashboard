@@ -1,10 +1,10 @@
-import Link from "next/link";
-import Image from "next/image";
-import { PokemonSimpleResult } from "../interfaces/pokemon-simple-result";
-import { IoHeart, IoHeartCircle, IoHeartOutline } from "react-icons/io5";
+import Link from 'next/link';
+import Image from 'next/image';
+import { IoHeart, IoHeartCircle, IoHeartOutline } from 'react-icons/io5';
+import { PokemonSimpleResponse } from '../interfaces/pokemon-simple-response';
 
 interface Props {
-  pokemon: PokemonSimpleResult;
+  pokemon: PokemonSimpleResponse;
 }
 
 export const PokemonCard = ({ pokemon }: Props) => {
@@ -26,9 +26,12 @@ export const PokemonCard = ({ pokemon }: Props) => {
           </p>
           <p className="text-sm text-gray-100"></p>
           <div className="mt-5">
-          <Link href={`/dashboard/pokemon/${id}`} className="rounded-full border px-4 py-2 text-xs font-semibold text-gray-100">
-          Ver información
-          </Link>
+            <Link
+              href={`/dashboard/pokemon/${id}`}
+              className="rounded-full border px-4 py-2 text-xs font-semibold text-gray-100"
+            >
+              Ver información
+            </Link>
           </div>
         </div>
         <div className="border-b">

@@ -1,8 +1,8 @@
-import { PokemonSimpleResult } from "../interfaces/pokemon-simple-result";
-import { PokemonCard } from "./PokemonCard";
+import { PokemonSimpleResponse } from '../interfaces/pokemon-simple-response';
+import { PokemonCard } from './PokemonCard';
 
 interface Props {
-  pokemons: PokemonSimpleResult[];
+  pokemons: PokemonSimpleResponse[];
 }
 
 export const PokemonGridCards = ({ pokemons }: Props) => {
@@ -10,7 +10,7 @@ export const PokemonGridCards = ({ pokemons }: Props) => {
     <div className="flex flex-wrap items-center justify-center gap-9">
       <PokemonCard pokemon={pokemons[0]} />
 
-      {pokemons.map((pokemon) => (
+      {pokemons.map(pokemon => (
         <PokemonCard key={pokemon.id} pokemon={pokemon} />
       ))}
     </div>
